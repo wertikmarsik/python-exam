@@ -2,10 +2,8 @@ from datetime import datetime
 
 def convert_date(input_date, input_format, output_format):
     try:
-        # Парсимо вхідну дату за вказаним форматом
         parsed_date = datetime.strptime(input_date, input_format)
         
-        # Форматуємо дату за вказаним вихідним форматом
         output_date = parsed_date.strftime(output_format)
         
         return output_date
@@ -13,7 +11,6 @@ def convert_date(input_date, input_format, output_format):
     except ValueError as e:
         return f"Помилка: {e}"
 
-# Приклад використання
 input_date = input("Введіть дату: ")
 input_format = '%d/%m/%Y'
 output_format_1 = '%Y-%m-%d'
